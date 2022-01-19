@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>string 6</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script>
+		function enviarDados()
+    {
+		var i, nome, nome1, num, num1, num2;
+
+    nome = document.frmValores.nome.value;
+
+    num = nome.lastIndexOf(" ")
+    num1 = nome.indexOf(" ")
+
+    for (i = num; i < nome.length; i++)
+    {
+      nome1 = nome.charAt(i)
+      document.write("<b>" + nome1.toUpperCase() + "</b>")
+    }
+
+    document.write(", ")
+
+    for (i = 0; i < num1; i++)
+    {
+      document.write(nome.charAt(i))
+    }
+
+    for (i = num1; i < num; i++)
+    {
+    if (nome.charAt(i) == " "){
+      document.write(" " + nome.charAt(i + 1) + ".")
+    }
+    }
+}
+	</script>
+  </head>
+  <body>
+    <form name="frmValores">
+		Digite seu nome completo: <input type="text" name="nome"><br>
+    <input type="button" value="Enviar" onclick="enviarDados();">
+	</form>
+  </body>
+</html>

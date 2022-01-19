@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+ <script>
+    function enviarDados()
+    {
+		var i, nome, letra, vog, cons, dig, out;
+    vog = 0
+    cons = 0 
+    dig = 0
+    out = 0
+
+    nome = document.frmValores.nome.value;
+    nome = nome.toLowerCase();
+
+    for (i = 0; i < nome.length; i++)
+    {
+      letra = nome.charAt(i);
+
+      switch(letra)
+      {
+      case "a":
+      case "e": 
+      case "i": 
+      case "o": 
+      case "u":
+      vog += 1
+      break;
+
+      case "b":
+      case "c":
+      case "d":
+      case "f":
+      case "g": 
+      case "h":  
+      case "j": 
+      case "k": 
+      case "l": 
+      case "m": 
+      case "n": 
+      case "p": 
+      case "l": 
+      case "q": 
+      case "r": 
+      case "s": 
+      case "t": 
+      case "v": 
+      case "w": 
+      case "x":
+      case "y":
+      case "z":
+      cons += 1
+      break;
+      
+      case "0":
+      case "1":
+      case "2":
+      case "3":
+      case "4":
+      case "5":
+      case "6":
+      case "7":
+      case "8":
+      case "9":
+      
+      dig += 1
+      break;
+
+      default:
+      out += 1
+    }
+    }
+    document.write("<table border>");
+    document.write("<tr><td> Vogais: " + vog + "</tr></td>");
+    document.write("<tr><td> Consoantes: " + cons + "</tr></td>");
+    document.write("<tr><td> Dígitos: " + dig + "</tr></td>");
+    document.write("<tr><td> Outros: " + out + "</tr></td>");
+    }
+	</script>
+  </head>
+  <body>
+    <form name="frmValores">
+		Informe caracteres: <input type="text" name="nome"><br>
+    <input type="button" value="Enviar" onclick="enviarDados();">
+	</form>
+    <script src="script.js"></script>
+  </body>
+</html>

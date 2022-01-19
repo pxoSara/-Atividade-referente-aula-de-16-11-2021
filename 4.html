@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+ <script>
+    function enviarDados()
+    {
+		var i, nome, letra, numero;
+
+    numero = 0
+
+    nome = document.frmValores.nome.value;
+    nome = nome.replace(" ", "");
+
+   for(var i = 0; i < nome.length; i++)
+   { 
+   if (nome.charAt(i) != nome.charAt(nome.length - i - 1)){
+   numero += 1
+   }
+
+   else
+   numero += 0 
+}
+if (numero == 0)
+document.write("É um palíndromo!")
+
+else
+document.write("Não é um palíndromo!")
+}
+	</script>
+  </head>
+  <body>
+    	<form name="frmValores">
+		Digite uma palavra: <input type="text" name="nome"><br>
+    <input type="button" value="Enviar" onclick="enviarDados();">
+	</form>
+  </body>
+</html>

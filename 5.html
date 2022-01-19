@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>string 5</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  <script>
+		function enviarDados()
+    {
+		var i, nome, nome1, num;
+
+    nome = document.frmValores.nome.value;
+
+    num = nome.lastIndexOf(" ")
+
+    for (i = num; i < nome.length; i++)
+    {
+      document.write(nome.charAt(i))
+    }
+
+    document.write(", ")
+
+    for (i = 0; i < num; i++)
+    {
+      document.write(nome.charAt(i))
+    }
+}
+	</script>
+  </head>
+  <body>
+    <form name="frmValores">
+		Digite seu nome completo: <input type="text" name="nome"><br>
+    <input type="button" value="Enviar" onclick="enviarDados();">
+	</form>
+  </body>
+</html>

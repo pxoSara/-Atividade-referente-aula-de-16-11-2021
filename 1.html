@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>String 1</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script>
+		function enviarDados()
+    {
+		var i, nome, letra, tamanho;
+
+    nome = document.frmValores.nome.value;
+    document.write("<table border>");
+    document.write("<tr>");
+
+for (i = 0; i < nome.length; i++) 
+{
+  letra = nome.charAt(i);
+  document.write("<td>" + letra + "</td>");
+}
+
+for (i = 0; i < nome.length; i++) 
+{
+  letra = nome.charAt(i)
+  document.write("<tr>");
+  document.write("<td>" + letra + "</td>");
+}
+document.write("</tr>");
+document.write("</table>");
+}
+	</script>
+  </head>
+  <body>
+  <form name="frmValores">
+		Digite uma palavra: <input type="text" name="nome"><br>
+    <input type="button" value="Enviar" onclick="enviarDados();">
+	</form>
+  </body>
+</html>
